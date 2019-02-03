@@ -71,3 +71,7 @@
 .five.wide.column{
   margin-top: 50px;
 }
+
+.hidden{
+  display: none;
+}

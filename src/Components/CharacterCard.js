@@ -2,20 +2,34 @@ import React from "react";
 import House from "./House"
 
 class CharacterCard extends React.Component {
-  dropdown = () => {
-    return `<div class="ui selection dropdown">
-    <input type="hidden" name="house">
-    <i class="dropdown icon"></i>
-      <div class="default text"> Edit House</div>
-      <div class="menu">
-    <div class="item" data-value="1">Male</div>
-    <div class="item" data-value="0">Female</div>
-  </div>
-</div>`
-    // let houses = this.props.houses.map(house => (
-    //
-    // ))
+  state={
+    showForm: true,
+    value: 'Gryffindor',
+    house: this.props.character.house
   }
+
+
+
+  showForm = e => {
+    this.setState({
+      showForm: !this.state.showForm
+    })
+  }
+
+  handleChange = e => {
+    this.setState({
+      value: e.target.value
+    })
+  }
+
+  handleSubmit = e => {
+     this.setState({
+       house: this.state.value
+     })
+    console.log(this.state.value)
+    e.preventDefault();
+  }
+
   render() {
 
     return(
@@ -26,16 +40,32 @@ class CharacterCard extends React.Component {
     <img src={this.props.character.image1}/>
   </div>
   <div className="content">
-    <a className="header">{this.props.character.name}</a>
+    <span className="header">{this.props.character.name}</span>
     <div className="meta">
-      <span className="date">{this.props.character.house}</span>
+      <a onClick={this.showForm} className="date">{this.state.house}</a>
     </div>
   </div>
-  <div className="extra content">
-    {this.dropdown()}
+
+  <div className={this.state.showForm ? 'extra content hidden':'extra content'}>
+    <form onSubmit={this.handleSubmit}>
+      <label>
+      Edit House:
+        <select
+        value={this.state.value}
+        onChange={this.handleChange}
+        className="ui dropdown">
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+        </select>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+
   </div>
   </div>
-      </div>
 </div>
     )
   }
