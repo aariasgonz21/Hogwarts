@@ -5,7 +5,11 @@
 .app {
   text-align: center;
   height: 100%;
+  background-image: url(https://data.whicdn.com/images/320759221/original.jpg?t=1539408683);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 .index-image {
   width: 100%;
@@ -53,4 +57,17 @@
 .house-div {
   height: 100%;
   width: 100%;
+}
+/*--------------------*/
+
+#main-title{
+  font-family: 'Harry P', cursive;
+  font-size: 10em;
+  color: #F8E71C;
+}
+#add-char-btn{
+  margin-top: 20px;
+}
+.five.wide.column{
+  margin-top: 50px;
 }
