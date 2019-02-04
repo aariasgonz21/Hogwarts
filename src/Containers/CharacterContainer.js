@@ -14,9 +14,6 @@ export default class CharacterContainer extends React.Component {
     })
   }
 
-//form input change event handlers
-
-
   render() {
     let characters = this.props.characters.map(character => (
       <CharacterCard className="ui three column centered grid" key={character.id} character={character}/>

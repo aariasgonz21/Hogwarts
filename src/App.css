@@ -83,10 +83,15 @@
 
 .form-container{
   margin: 5% 30% 0 30%;
+  background-color: #C0C0C0;
 }
 
 .houseNames{
-  font-size: 8em;
+  font-size: 6em;
   font-family: 'Harry p', sans-serif;
-  color: orange;
+  color: #F8E71C;
+}
+
+.ui.three.centered.column.grid{
+  margin: 0 auto;
 }

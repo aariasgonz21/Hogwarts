@@ -26,7 +26,7 @@ class CharacterCard extends React.Component {
      this.setState({
        house: this.state.value
      })
-    console.log(this.state.value)
+    //console.log(this.state.value)
     e.preventDefault();
   }
 
