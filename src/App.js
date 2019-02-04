@@ -38,7 +38,7 @@ class App extends Component {
       <img src="./line-breaker.svg" alt=''/>
         <CharacterContainer characters={this.state.characters}/>
         <img src="./line-breaker.svg" alt=''/>
-        <HouseContainer houses={this.state.houses} />
+        <HouseContainer houses={this.state.houses} characters={this.state.characters}/>
       </div>
     );
   }

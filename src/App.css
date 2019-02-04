@@ -4,9 +4,10 @@
 }
 .app {
   text-align: center;
-  height: 100%;
+  background-height: 250%;
   background-image: url(https://data.whicdn.com/images/320759221/original.jpg?t=1539408683);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -38,6 +39,9 @@
   top: 10%;
   width: 100%;
   height: 100%;
+  font-size: 10em;
+  font-family: 'Harry p', cursive;
+  color: #F8E71C;
 }
 .house {
   width: 100%;
@@ -70,8 +74,19 @@
 }
 .five.wide.column{
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .hidden{
   display: none;
+}
+
+.form-container{
+  margin: 5% 30% 0 30%;
+}
+
+.houseNames{
+  font-size: 8em;
+  font-family: 'Harry p', sans-serif;
+  color: orange;
 }
